@@ -1,6 +1,7 @@
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
+
 import java.util.ResourceBundle.Control;
 
 import com.example.Gestiontache;
@@ -18,6 +19,7 @@ public class testController {
         p.ajouterTacheProjet("titre2", "description2");
         p.ajouterTacheProjet("titre3", "description3");
         p.ajouterTacheProjet("titre4", "description4");
-        c.DisplayTache(p.getTache("titre"));
+        AssertEquals("Titre : " + "titre" + "\nDescription : " + "Description" + "\nEtat : " + "à Faire" + "\nTemps : " + "0",c.DisplayTache(p.getTache("titre")));
+        AssertNull(c.DisplayTache(p.getTache("aze")));
     }
 }
