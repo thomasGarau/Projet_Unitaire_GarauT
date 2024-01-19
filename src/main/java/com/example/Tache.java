@@ -33,4 +33,16 @@ public class Tache {
     public int getTemps(){
         return this.temps;
     }
+
+    public String getTitre(){
+        return this.titre;
+    }
+
+    public String getDescription(){
+        return this.description;
+    }
+
+    public String toString(){
+        return "Titre : " + this.titre + "\nDescription : " + this.description + "\nEtat : " + this.etat + "\nTemps : " + this.temps;
+    }  
 }
